@@ -16,5 +16,9 @@
         <members>Account.Number_Of_Contacts__c</members>
         <name>CustomField</name>
     </types>
+    <types>
+        <members>*</members>
+        <name>RemoteSiteSetting</name>
+    </types>
     <version>43.0</version>
 </Package>
