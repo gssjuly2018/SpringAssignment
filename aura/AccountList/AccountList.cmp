@@ -1,0 +1,22 @@
+<aura:component controller="AccountController" implements="force:appHostable,flexipage:availableForAllPageTypes" access="global" >
+    <aura:attribute name="recentaccounts" type="List" />
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    <table class="slds-table slds-table_bordered slds-table_cell-buffer">
+        <thead>
+            <tr class="slds-text-title_caps">
+                <th>ID</th>
+                <th>Name</th>
+                <th>Created Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            <aura:iteration items="{!v.recentaccounts}" var="account">
+                <tr>
+                    <td>{!account.Id}</td>
+                    <td>{!account.Name}</td>
+                    <td>{!account.CreatedDate}</td>
+                </tr>
+            </aura:iteration>
+        </tbody>
+    </table>
+</aura:component>
